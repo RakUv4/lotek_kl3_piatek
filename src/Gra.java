@@ -19,7 +19,7 @@ public class Gra {
         return wylosowane;
     }
 
-    public void wpiszLiczby(){
+    private void wpiszLiczby(){
         Scanner sc = new Scanner(System.in);
         wpisane = new ArrayList<>();
 
@@ -35,7 +35,7 @@ public class Gra {
         }
     }
 
-    public LinkedList<Integer> zwrocTrafione(){
+    private LinkedList<Integer> zwrocTrafione(){
         LinkedList<Integer> trafione = new LinkedList<>();
         for (Integer wylosowana:wylosowane){
             if(wpisane.contains(wylosowana)){
@@ -45,11 +45,21 @@ public class Gra {
 
         return trafione;
     }
-    //mazwa: wylosuj liczby
-    //opis: metoda losuje 6 liczb z zakresu 1, 49 bez powtorzen
+
+    public LinkedList<Integer> zagraj(){
+        wylosujLiczby();
+        wpiszLiczby();
+        System.out.println("wpisane: " + wpisane);
+        System.out.println("wylosowane: " + wylosowane);
+        System.out.println("trafione: " + zwrocTrafione());
+        return zwrocTrafione();
+    }
+
+    // mazwa: wylosuj liczby
+    // opis: metoda losuje 6 liczb z zakresu 1, 49 bez powtorzen
     // parametry: brak
     // zwracana wartość: brak
-    //autor: 000
+    // autor: 000
 
     private void wylosujLiczby(){
         Random rand = new Random();
