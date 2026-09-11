@@ -25,6 +25,7 @@ public class Gra {
         for (int i = 0; i < 6; i++){
             System.out.println("Podaj " + (i + 1) + " liczbę");
             liczba = sc.nextInt();
+
             while (wpisane.contains(liczba)){
                 System.out.println("Taka liczba już była podaj inną");
                 liczba = sc.nextInt();
