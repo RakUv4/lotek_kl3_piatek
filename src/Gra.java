@@ -5,9 +5,7 @@ public class Gra {
 
 
     public Gra() {
-        if(wylosowane == null){
-            wylosujLiczby();
-        }
+
         wpisane = new ArrayList<>();
     }
 
@@ -63,9 +61,12 @@ public class Gra {
 
     private void wylosujLiczby(){
         Random rand = new Random();
-        wylosowane = new HashSet<>();
-        while (wylosowane.size()!=6){
-            wylosowane.add(rand.nextInt(1,49));
+        if(wylosowane == null){
+
+            wylosowane = new HashSet<>();
+        while (wylosowane.size()!=6) {
+            wylosowane.add(rand.nextInt(1, 49));
+            }
         }
     }
 }

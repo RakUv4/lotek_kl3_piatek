@@ -4,9 +4,11 @@ public class Main {
     Gra gra = new Gra();
 
         gra.zagraj();
-
+        System.out.println("nowa gra");
+        gra.zagraj();
         Gra gra2 = new Gra();
         System.out.println("te same liczby sie losują "+gra2.getWylosowane());
+        gra2.zagraj();
 
     }
 }
